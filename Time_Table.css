@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(7, 173, 118);
+}
+table,th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  color: #06425C;
+}
+th{
+    color: #06425C;
+}
+.cal caption{
+	text-transform: uppercase;
+	background-color: rgba(128, 128, 128, 0.575);
+	color:#000;
+	font-size: 150%;
+	-webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    padding-top: 10px;
+}
+table.cal{
+	color:#06425C;
+	border-spacing: 0;
+	border: 3px solid black;
+    border-radius: 0 0 25px 25px;
+    width: 100%;
+    height: 50vh;
+}
+a{
+    text-decoration: none;
+}
+th{
+    width:10%;
+    background-color: rgb(101, 145, 184);
+}
+td{
+    width: 14%;
+}
+.lunch{
+    width: 5%;
+}
+thead{
+    background-color: rgb(101, 145, 184);
+}
+tr:last-child{
+	-webkit-border-radius: 25px 25px 0 0;
+	border-radius: 0 0 25px 25px;	
+}
+tr:last-child>th:first-child {
+	-webkit-border-radius: 0 0 0 25px;
+	border-radius: 0 0 0 25px;	
+}
+
+tr:last-child>td:last-child{
+	-webkit-border-radius: 0 0 25px 0;
+	border-radius: 0 0 25px 0;	
+}
+.lab{
+    background-color:rgba(240, 128, 128, 0.76);
+}
+.tutorial{
+    background-color: rgb(198, 255, 105);
+}
+#break{
+    background-color: rgb(101, 145, 184);   
+}
