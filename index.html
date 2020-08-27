@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Time_Table</title>
+    <script type = "text/javascript">
+        /*No one should be betrayed*/
+        function buttonClick()
+        {
+            alert("Please use whatsapp link."); 
+        }
+    </script>
     <style>
         body {
-            background-image: url('Vivek1.jpeg');
-            background-color: #fff;
+            background-color: rgb(7, 173, 118);
         }
 
         table,
         th,
         td {
-            border: 1px solid #fff;
+            border: 1px solid black;
             border-collapse: collapse;
             text-align: center;
-            color: #fff;
+            color: #06425C;
         }
 
         th {
-            color: #fff;
+            color: #06425C;
         }
 
         .cal caption {
             text-transform: uppercase;
-            border: 3px solid #fff;
-            color: #fff;
+            background-color: rgba(128, 128, 128, 0.575);
+            color: #000;
             font-size: 150%;
             -webkit-border-radius: 25px 25px 0 0;
             border-radius: 25px 25px 0 0;
@@ -34,9 +40,9 @@
         }
 
         table.cal {
-            color: #fff;
+            color: #06425C;
             border-spacing: 0;
-            border: 3px solid #fff;
+            border: 3px solid black;
             border-radius: 0 0 25px 25px;
             width: 100%;
             height: 50vh;
@@ -45,12 +51,12 @@
         a {
             text-decoration: none;
             font-size: 1.5em;
-            color:#fff;
+            color: rgb(37, 37, 134);
         }
 
         th {
             width: 10%;
-            
+            background-color: rgb(101, 145, 184);
             font-size: 1.4em;
         }
 
@@ -63,7 +69,7 @@
         }
 
         thead {
-            
+            background-color: rgb(101, 145, 184);
         }
 
         tr:last-child {
@@ -82,20 +88,31 @@
         }
 
         .lab {
-            
+            background-color: rgba(240, 128, 128, 0.76);
         }
 
         .tutorial {
-            
+            background-color: rgb(198, 255, 105);
         }
 
         #break {
-            
+            background-color: rgb(101, 145, 184);
         }
-        p{
-            color: #fff;
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:  rgb(101, 145, 184);
+            color: #000;
+            font-weight: bold;
             text-align: center;
-            font-size: 1.8em;
+            font-size: 1.3em;
+        }
+        #name{
+            color:#fff;
+            font-size: 1em;
         }
     </style>
 </head>
@@ -131,80 +148,119 @@
         <tbody>
             <tr>
                 <th>Monday</th>
-                <td><a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
-                <td><a href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
                 <td id="break" rowspan="5" class="lunch"></td>
-                <td colspan="2"><a href="">SST</a></td>
+                <td colspan="2"><a target = "_blank" href="https://us04web.zoom.us/j/2830818620?pwd=dXRuTktiUFlCSDlYQ1Y4ZWlmcnlQQT09">SST</a></td>
 
-                <td><a href="https://us02web.zoom.us/j/81822050471?pwd=S1NpS3FaekxUT3pVc3Q2Z1UyVllidz09">ML</a><br>
-                    <a href="https://us02web.zoom.us/j/81935652539?pwd=aUJ4RlNSQ1RBWWFnV2dmbGsxTnpUUT09"> CC</a></td>
-                <td><a href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                  <a href="https://zoom.us/j/97863216952?pwd=OStlZytJdW0vbVNYTXZONVd1RGZkQT09">BCA</a></td>
+                <td><a href = "#" onclick="buttonClick()">ML</a><br>
+                    <a href = "#" onclick="buttonClick()"> CC</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
+                    <a href = "#" onclick="buttonClick()">BCA</a>
+                </td>
 
             </tr>
 
             <tr>
                 <th>Tueday</th>
-                <td class="tutorial"><a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-E1</a><br>
-                    <a href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-E2</a></td>
-                <td><a href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
+                <td class="tutorial"><a target="_blank"
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-E1</a><br>
+                    <a target="_blank"
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-E2</a>
+                </td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
 
-                <td class="lab" colspan="2"><a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-(E1 Click Here)</a><br><a
-                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E2 Click Here)</a></td>
+                <td class="lab" colspan="2"><a
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-(E1 Click
+                        Here)</a><br>
+                    <a target="_blank"
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E2 Click
+                        Here)</a></td>
 
-                <td><a href="https://us02web.zoom.us/j/83036790728?pwd=NFFNRVBGZlFCenh2Q1pZL2x6RlBDUT09">ML</a><br>
-                    <a href="https://us02web.zoom.us/j/89739199029?pwd=ZDNQcng4THFGRmZ1KzFxWE1qdUhkQT09"> CC</a></td>
-                    <td><a href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                        <a href="https://zoom.us/j/97863216952?pwd=OStlZytJdW0vbVNYTXZONVd1RGZkQT09">BCA</a></td>
+                <td><a href = "#" onclick="buttonClick()">ML</a><br>
+                    <a href = "#" onclick="buttonClick()"> CC</a></td>
+
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
+                        <a href = "#" onclick="buttonClick()">BCA</a>
+                </td>
             </tr>
 
             <tr>
                 <th>Wednesday</th>
-                <td><a href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
-                <td><a href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
 
-                <td class="lab" colspan="2"><a href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E1 Click Here)</a><br>
-                    <a href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-(E2 Click Here)</a></td>
+                <td class="lab" colspan="2"><a
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E1 Click
+                        Here)</a><br>
+                    <a target="_blank"
+                        href="https://us04web.zoom.us/j/78004398129?pwd=WmxJUWFGSy9ic0JTelpvbUlaWW5mUT09">CN-(E2 Click
+                        Here)</a></td>
 
-                <td><a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
-                <td><a href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                    <a href="https://zoom.us/j/97863216952?pwd=OStlZytJdW0vbVNYTXZONVd1RGZkQT09">BCA</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
+                        <a href = "#" onclick="buttonClick()">BCA</a>
+                </td>
             </tr>
 
             <tr>
                 <th>Thursday</th>
-                <td class="lab" colspan="2"><a href = "https://us02web.zoom.us/j/86249553230?pwd=SHJSK2h1ZWl4bTB4Z1VFRmZnckdxZz09">SW-II-(E1 Click Here)</a><br>
-                     <a href = "https://us02web.zoom.us/j/6234668348?pwd=NlJIOEJ3eDdobitIZlU5K0MzRUordz09">SW-II-(E2 Click Here)</a></td>
+                <td class="lab" colspan="2"><a target="_blank"
+                        href="https://us02web.zoom.us/j/86249553230?pwd=SHJSK2h1ZWl4bTB4Z1VFRmZnckdxZz09">SW-II-(E1
+                        Click Here)</a><br>
+                    <a target="_blank"
+                        href="https://us02web.zoom.us/j/6234668348?pwd=NlJIOEJ3eDdobitIZlU5K0MzRUordz09">SW-II-(E2 Click
+                        Here)</a></td>
 
 
-                <td><a href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
-                <td><a href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
-                <td><a href = "https://us04web.zoom.us/j/4359547089?pwd=SlVSZDZWSXcxVXBWZHZFQVdFdHZJQT09">HVE</a></td>
-                <td class="tutorial"><a href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E1</a><br>
-                    <a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-E2</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
+                <td><a target="_blank"
+                        href="https://us04web.zoom.us/j/4359547089?pwd=SlVSZDZWSXcxVXBWZHZFQVdFdHZJQT09">HVE</a></td>
+                <td class="tutorial"><a target="_blank"
+                        href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E1</a><br>
+                    <a target="_blank"
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-E2</a></td>
             </tr>
 
             <tr>
                 <th>Friday</th>
-                <td class="tutorial"><a
-                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM(tutorial)<br>(E1 + E2)</a><br>
-                    <!--<a href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E2</a></td>-->
-                <td><a href="https://us02web.zoom.us/j/85208978546?pwd=RUJoYzJWRlNaWFRpZGRMajQ4UGlNZz09">ML</a><br>
-                    <a href="https://us02web.zoom.us/j/82629670374?pwd=alkvTU52OTVsMUNvOSs1bjBiU3NwZz09"> CC</a></td>
+                <td class="tutorial"><a target="_blank"
+                        href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-E1</a><br>
+                    <a target="_blank"
+                        href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E2</a></td>
 
-                <td><a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
-                <td><a href = "https://us04web.zoom.us/j/4359547089?pwd=SlVSZDZWSXcxVXBWZHZFQVdFdHZJQT09">HVE</a></td>
-                <td class="lab" colspan="2"><a
-                        href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-(E1 Click Here)</a><br>
-                    <a href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-(E2 Click Here)</a></td>
+                <td><a href = "#" onclick="buttonClick()">ML</a><br>
+                    <a href = "#" onclick="buttonClick()"> CC</a></td>
+
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
+                <td><a target="_blank"
+                        href="https://us04web.zoom.us/j/4359547089?pwd=SlVSZDZWSXcxVXBWZHZFQVdFdHZJQT09">HVE</a></td>
+                <td class="lab" colspan="2"><a target="_blank"
+                        href="https://us04web.zoom.us/j/78004398129?pwd=WmxJUWFGSy9ic0JTelpvbUlaWW5mUT09">CN-(E1 Click
+                        Here)</a><br>
+                    <a target="_blank"
+                        href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-(E2 Click
+                        Here)</a></td>
 
             </tr>
         </tbody>
     </table>
-    <div>
-        <p>Developed By - Vedant Jaiswal</p>
-        
-    </div>
+    <div class="footer">
+        <p>Developed By <span><a id = "name" target="_blank" href = "https://www.instagram.com/vedant_jaiswal14/">Vedant Jaiswal</a><span></p>
+      </div>
 </body>
 
 </html>
