@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Time_Table</title>
-    <script type = "text/javascript">
+    <script type="text/javascript">
         /*No one should be betrayed*/
-        function buttonClick()
-        {
-            alert("Please use whatsapp link."); 
+        function buttonClick() {
+            alert("Please use whatsapp link.");
         }
     </script>
     <style>
@@ -46,6 +45,7 @@
             border-radius: 0 0 25px 25px;
             width: 100%;
             height: 50vh;
+            z-index: 2;
         }
 
         a {
@@ -100,18 +100,20 @@
         }
 
         .footer {
+            z-index: 1;
             position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color:  rgb(101, 145, 184);
+            background-color: rgb(101, 145, 184);
             color: #000;
             font-weight: bold;
             text-align: center;
             font-size: 1.3em;
         }
-        #name{
-            color:#fff;
+
+        #name {
+            color: #fff;
             font-size: 1em;
         }
     </style>
@@ -153,13 +155,14 @@
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
                 <td id="break" rowspan="5" class="lunch"></td>
-                <td colspan="2"><a target = "_blank" href="https://us04web.zoom.us/j/2830818620?pwd=dXRuTktiUFlCSDlYQ1Y4ZWlmcnlQQT09">SST</a></td>
+                <td colspan="2"><a target="_blank"
+                        href="https://us04web.zoom.us/j/2830818620?pwd=dXRuTktiUFlCSDlYQ1Y4ZWlmcnlQQT09">SST</a></td>
 
-                <td><a href = "#" onclick="buttonClick()">ML</a><br>
-                    <a href = "#" onclick="buttonClick()"> CC</a></td>
+                <td><a href="#" onclick="buttonClick()">ML</a><br>
+                    <a href="#" onclick="buttonClick()"> CC</a></td>
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                    <a href = "#" onclick="buttonClick()">BCA</a>
+                    <a href="#" onclick="buttonClick()">BCA</a>
                 </td>
 
             </tr>
@@ -181,12 +184,12 @@
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E2 Click
                         Here)</a></td>
 
-                <td><a href = "#" onclick="buttonClick()">ML</a><br>
-                    <a href = "#" onclick="buttonClick()"> CC</a></td>
+                <td><a href="#" onclick="buttonClick()">ML</a><br>
+                    <a href="#" onclick="buttonClick()"> CC</a></td>
 
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                        <a href = "#" onclick="buttonClick()">BCA</a>
+                    <a href="#" onclick="buttonClick()">BCA</a>
                 </td>
             </tr>
 
@@ -208,7 +211,7 @@
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                        <a href = "#" onclick="buttonClick()">BCA</a>
+                    <a href="#" onclick="buttonClick()">BCA</a>
                 </td>
             </tr>
 
@@ -241,8 +244,8 @@
                     <a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E2</a></td>
 
-                <td><a href = "#" onclick="buttonClick()">ML</a><br>
-                    <a href = "#" onclick="buttonClick()"> CC</a></td>
+                <td><a href="#" onclick="buttonClick()">ML</a><br>
+                    <a href="#" onclick="buttonClick()"> CC</a></td>
 
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
@@ -259,8 +262,9 @@
         </tbody>
     </table>
     <div class="footer">
-        <p>Developed By <span><a id = "name" target="_blank" href = "https://www.instagram.com/vedant_jaiswal14/">Vedant Jaiswal</a><span></p>
-      </div>
+        <p>Developed By <span><a id="name" target="_blank" href="https://www.instagram.com/vedant_jaiswal14/">Vedant
+                    Jaiswal</a><span></p>
+    </div>
 </body>
 
 </html>
