@@ -9,6 +9,30 @@
         function buttonClick() {
             alert("Please use whatsapp link.");
         }
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var d = " AM";
+            if (h > 12) {
+                h = h - 12;
+                h = "0" + h;
+                d = " PM";
+            }
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s + d;
+            var t = setTimeout(startTime, 500);
+
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.getElementById("txt0").innerHTML = days[today.getDay()];
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
     </script>
     <style>
         body {
@@ -101,11 +125,11 @@
 
         .footer {
             z-index: 1;
-            position: fixed;
+            
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: rgb(101, 145, 184);
+            background-color: inherit;
             color: #000;
             font-weight: bold;
             text-align: center;
@@ -116,10 +140,18 @@
             color: #fff;
             font-size: 1em;
         }
+        #txt0{
+            font-size: 1.3em;
+        }
+        #txt{
+            font-size: 1.2em;
+        }
     </style>
 </head>
 
-<body>
+<body onload="startTime()">
+    <div id="txt0"></div>
+    <div id="txt"></div>
     <table class="cal">
         <caption>MEDI-CAPS UNIVERSITY,INDORE<br>
             Department of Computer Science and Engineering<br>
@@ -158,11 +190,12 @@
                 <td colspan="2"><a target="_blank"
                         href="https://us04web.zoom.us/j/2830818620?pwd=dXRuTktiUFlCSDlYQ1Y4ZWlmcnlQQT09">SST</a></td>
 
-                <td><a target="_blank" href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
-                    <a target = "_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
+                    <a target="_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                    <a target = "_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
+                    <a target="_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
                 </td>
 
             </tr>
@@ -184,12 +217,13 @@
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E2 Click
                         Here)</a></td>
 
-                <td><a target="_blank" href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
-                    <a target = "_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
+                    <a target="_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
 
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                    <a target = "_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
+                    <a target="_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
                 </td>
             </tr>
 
@@ -211,7 +245,7 @@
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
-                    <a  target = "_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
+                    <a target="_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
                 </td>
             </tr>
 
@@ -244,8 +278,9 @@
                     <a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E2</a></td>
 
-                <td><a target="_blank" href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
-                    <a target = "_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
+                <td><a target="_blank"
+                        href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
+                    <a target="_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
 
                 <td><a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
