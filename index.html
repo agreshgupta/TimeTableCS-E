@@ -4,155 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Time_Table</title>
-    <script type="text/javascript">
-        /*No one should be betrayed*/
-        function buttonClick() {
-            alert("Please use whatsapp link.");
-        }
-        function startTime() {
-            var today = new Date();
-            var h = today.getHours();
-            var d = " AM";
-            if (h > 12) {
-                h = h - 12;
-                h = "0" + h;
-                d = " PM";
-            }
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('txt').innerHTML =
-                h + ":" + m + ":" + s + d;
-            var t = setTimeout(startTime, 500);
-
-            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            document.getElementById("txt0").innerHTML = days[today.getDay()];
-        }
-        function checkTime(i) {
-            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-            return i;
-        }
-    </script>
-    <style>
-        body {
-            background-color: rgb(7, 173, 118);
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            text-align: center;
-            color: #06425C;
-        }
-
-        th {
-            color: #06425C;
-        }
-
-        .cal caption {
-            text-transform: uppercase;
-            background-color: rgba(128, 128, 128, 0.575);
-            color: #000;
-            font-size: 150%;
-            -webkit-border-radius: 25px 25px 0 0;
-            border-radius: 25px 25px 0 0;
-            padding-top: 10px;
-        }
-
-        table.cal {
-            color: #06425C;
-            border-spacing: 0;
-            border: 3px solid black;
-            border-radius: 0 0 25px 25px;
-            width: 100%;
-            height: 50vh;
-            z-index: 2;
-        }
-
-        a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: rgb(37, 37, 134);
-        }
-
-        th {
-            width: 10%;
-            background-color: rgb(101, 145, 184);
-            font-size: 1.4em;
-        }
-
-        td {
-            width: 14%;
-        }
-
-        .lunch {
-            width: 5%;
-        }
-
-        thead {
-            background-color: rgb(101, 145, 184);
-        }
-
-        tr:last-child {
-            -webkit-border-radius: 25px 25px 0 0;
-            border-radius: 0 0 25px 25px;
-        }
-
-        tr:last-child>th:first-child {
-            -webkit-border-radius: 0 0 0 25px;
-            border-radius: 0 0 0 25px;
-        }
-
-        tr:last-child>td:last-child {
-            -webkit-border-radius: 0 0 25px 0;
-            border-radius: 0 0 25px 0;
-        }
-
-        .lab {
-            background-color: rgba(240, 128, 128, 0.76);
-        }
-
-        .tutorial {
-            background-color: rgb(198, 255, 105);
-        }
-
-        #break {
-            background-color: rgb(101, 145, 184);
-        }
-
-        .footer {
-            z-index: 1;
-            
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: inherit;
-            color: #000;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.3em;
-        }
-
-        #name {
-            color: #fff;
-            font-size: 1em;
-        }
-        #txt0{
-            font-size: 1.3em;
-        }
-        #txt{
-            font-size: 1.2em;
-        }
-    </style>
+    <link rel="stylesheet" href="design.css" type="text/css">
+    <script type="text/javascript" src="functions.js"></script>    
 </head>
 
 <body onload="startTime()">
     <div id="txt0"></div>
     <div id="txt"></div>
-    <table class="cal">
+    <div id="des">Running out of time? Then don't waste your time checking out the schedule
+         just <span id = "desb">Click on the pink tile</span> to join the current lecture!
+    </div>
+    <br><table class="cal">
         <caption>MEDI-CAPS UNIVERSITY,INDORE<br>
             Department of Computer Science and Engineering<br>
             TIME-TABLE CS-E </caption>
@@ -170,7 +32,7 @@
             <tr>
                 <th>TIME</th>
                 <th>10:30-11:20</th>
-                <th>11:20-12:15</th>
+                <th>11:25-12:15</th>
 
                 <th>1:15-2:05</th>
                 <th>2:10:3:00</th>
@@ -182,18 +44,18 @@
         <tbody>
             <tr>
                 <th>Monday</th>
-                <td><a target="_blank"
+                <td id="M1" ><a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
-                <td><a target="_blank"
+                <td id="M2"><a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
                 <td id="break" rowspan="5" class="lunch"></td>
-                <td colspan="2"><a target="_blank"
+                <td id="M3" colspan="2"><a target="_blank"
                         href="https://us04web.zoom.us/j/2830818620?pwd=dXRuTktiUFlCSDlYQ1Y4ZWlmcnlQQT09">SST</a></td>
 
-                <td><a target="_blank"
+                <td id="M4"><a target="_blank"
                         href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
                     <a target="_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
-                <td><a target="_blank"
+                <td id="M5"><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
                     <a target="_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
                 </td>
@@ -202,26 +64,26 @@
 
             <tr>
                 <th>Tueday</th>
-                <td class="tutorial"><a target="_blank"
+                <td id="T1" class="tutorial"><a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-E1</a><br>
                     <a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-E2</a>
                 </td>
-                <td><a target="_blank"
+                <td id="T2"><a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
 
-                <td class="lab" colspan="2"><a
+                <td id="T3" class="lab" colspan="2"><a
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-(E1 Click
                         Here)</a><br>
                     <a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E2 Click
                         Here)</a></td>
 
-                <td><a target="_blank"
+                <td id="T4"><a target="_blank"
                         href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
                     <a target="_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
 
-                <td><a target="_blank"
+                <td id="T5"><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
                     <a target="_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
                 </td>
@@ -229,21 +91,21 @@
 
             <tr>
                 <th>Wednesday</th>
-                <td><a target="_blank"
+                <td id="W1"><a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
-                <td><a target="_blank"
+                <td id="W2"><a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
 
-                <td class="lab" colspan="2"><a
+                <td id="W3" class="lab" colspan="2"><a
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-(E1 Click
                         Here)</a><br>
                     <a target="_blank"
                         href="https://us04web.zoom.us/j/78004398129?pwd=WmxJUWFGSy9ic0JTelpvbUlaWW5mUT09">CN-(E2 Click
                         Here)</a></td>
 
-                <td><a target="_blank"
+                <td id="W4"><a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
-                <td><a target="_blank"
+                <td id="W5"><a target="_blank"
                         href="https://us02web.zoom.us/j/9459074849?pwd=UHNKL3gxRkY0ZDU1WXhVbGZEYWl1QT09">PE</a><br>
                     <a target="_blank" href="https://wa.me/91" onclick="buttonClick()">BCA</a>
                 </td>
@@ -251,7 +113,7 @@
 
             <tr>
                 <th>Thursday</th>
-                <td class="lab" colspan="2"><a target="_blank"
+                <td id="Th1" class="lab" colspan="2"><a target="_blank"
                         href="https://us02web.zoom.us/j/86249553230?pwd=SHJSK2h1ZWl4bTB4Z1VFRmZnckdxZz09">SW-II-(E1
                         Click Here)</a><br>
                     <a target="_blank"
@@ -259,13 +121,13 @@
                         Here)</a></td>
 
 
-                <td><a target="_blank"
+                <td id="Th2"><a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM</a></td>
-                <td><a target="_blank"
+                <td id="Th3"><a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN</a></td>
-                <td><a target="_blank"
+                <td id="Th4"><a target="_blank"
                         href="https://us04web.zoom.us/j/4359547089?pwd=SlVSZDZWSXcxVXBWZHZFQVdFdHZJQT09">HVE</a></td>
-                <td class="tutorial"><a target="_blank"
+                <td id="Th5" class="tutorial"><a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E1</a><br>
                     <a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE-E2</a></td>
@@ -273,20 +135,20 @@
 
             <tr>
                 <th>Friday</th>
-                <td class="tutorial"><a target="_blank"
+                <td id="F1" class="tutorial"><a target="_blank"
                         href="https://us02web.zoom.us/j/9820889751?pwd=aGhIUHFIcVZPYk01YUJ6RzNhZnVzQT09">CGMM-E1</a><br>
                     <a target="_blank"
                         href="https://us02web.zoom.us/j/4566506496?pwd=emVsRS8xN0RwMEI3azJqN1RlR3Izdz09">CN-E2</a></td>
 
-                <td><a target="_blank"
+                <td id="F2"><a target="_blank"
                         href="https://us02web.zoom.us/j/82455766312?pwd=QTdoOTZkSUZkS0E0ZS8wQi9qdDdtQT09">ML</a><br>
                     <a target="_blank" href="https://wa.me/91" onclick="buttonClick()"> CC</a></td>
 
-                <td><a target="_blank"
+                <td id="F3"><a target="_blank"
                         href="https://us02web.zoom.us/j/4892642489?pwd=UTlZNE90N3IzMWQ2RUVpdjVraWN1dz09">SE</a></td>
-                <td><a target="_blank"
+                <td id="F4"><a target="_blank"
                         href="https://us04web.zoom.us/j/4359547089?pwd=SlVSZDZWSXcxVXBWZHZFQVdFdHZJQT09">HVE</a></td>
-                <td class="lab" colspan="2"><a target="_blank"
+                <td id="F5" class="lab" colspan="2"><a target="_blank"
                         href="https://us04web.zoom.us/j/78004398129?pwd=WmxJUWFGSy9ic0JTelpvbUlaWW5mUT09">CN-(E1 Click
                         Here)</a><br>
                     <a target="_blank"
