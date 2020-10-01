@@ -105,10 +105,10 @@ function current(){
             document.getElementById("Th1").style.background = "#FF1493";
         }
         else if( min >= 685 && min <= 735){
-            document.getElementById("Th2").style.background = "#FF1493";
+            document.getElementById("Th1").style.background = "#FF1493";
         }
         else if( min >= 795 && min <= 845){
-            document.getElementById("Th3").style.background = "#FF1493";
+            document.getElementById("Th2").style.background = "#FF1493";
         }
         else if( min >= 850 && min <= 900){
             document.getElementById("Th3").style.background = "#FF1493";
@@ -132,10 +132,10 @@ function current(){
             document.getElementById("F3").style.background = "#FF1493";
         }
         else if( min >= 850 && min <= 900){
-            document.getElementById("F3").style.background = "#FF1493";
+            document.getElementById("F4").style.background = "#FF1493";
         }
         else if( min >= 905 && min <= 960){
-            document.getElementById("F4").style.background = "#FF1493";
+            document.getElementById("F5").style.background = "#FF1493";
         }
         else if( min >= 965 && min <= 1020){
             document.getElementById("F5").style.background = "#FF1493";
